@@ -1,3 +1,4 @@
+/* GLOBAL STYLES */
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
   margin: 0;
@@ -6,6 +7,7 @@ body {
   color: #2c2c2c;
 }
 
+/* HEADER */
 header {
   background-color: #1a237e;
   color: white;
@@ -26,28 +28,37 @@ header h1 {
   font-size: 1.8em;
 }
 
+/* NAVIGATION LINKS */
+.nav-links {
+  display: flex;
+  gap: 12px;
+}
+
 .nav-links a {
-  margin-left: 15px;
   text-decoration: none;
-  color: #f8c8dc;
+  color: #ffffff; /* brighter white for visibility */
   font-weight: 600;
-  border: 1px solid #f8c8dc;
+  border: 2px solid #ffffff; /* thicker border for clarity */
   padding: 6px 14px;
   border-radius: 20px;
-  transition: 0.3s;
-  font-size: 0.9em;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 1em;
 }
 
-.nav-links a:hover {
-  background-color: #f8c8dc;
+.nav-links a:hover,
+.nav-links a:focus {
+  background-color: #ffffff;
   color: #1a237e;
+  outline: none;
 }
 
+/* LOGO */
 header img {
   max-height: 80px;
   border-radius: 6px;
 }
 
+/* MAIN CONTENT */
 main {
   max-width: 900px;
   margin: 40px auto;
@@ -63,6 +74,28 @@ main {
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
+/* POSTS SECTION */
+#posts-container article {
+  background: #ffffff;
+  padding: 18px;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+#posts-container h3 {
+  margin-top: 0;
+  color: #1a237e;
+}
+
+.post-meta {
+  font-size: 0.9em;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* FOOTER */
 footer {
   margin-top: 40px;
   background-color: #1a237e;
