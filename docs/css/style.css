@@ -36,9 +36,9 @@ header h1 {
 
 .nav-links a {
   text-decoration: none;
-  color: #ffffff; /* brighter white for visibility */
+  color: #ffffff; /* bright white for visibility */
   font-weight: 600;
-  border: 2px solid #ffffff; /* thicker border for clarity */
+  border: 2px solid #ffffff;
   padding: 6px 14px;
   border-radius: 20px;
   transition: background-color 0.3s ease, color 0.3s ease;
