@@ -1,3 +1,5 @@
+// js/ui.js
+
 const postsContainer = document.getElementById('posts-container');
 const loadingIndicator = document.getElementById('loading-indicator');
 const errorMessage = document.getElementById('error-message');
@@ -28,6 +30,7 @@ export function clearError() {
 
 export function renderPosts(posts) {
   if (!postsContainer) return;
+
   postsContainer.innerHTML = '';
 
   posts.forEach((post) => {
