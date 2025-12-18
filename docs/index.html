@@ -9,73 +9,76 @@
 
 <body>
 
-    <!-- HEADER -->
-    <header>
-        <div class="header-inner">
-            <h1>University Blog</h1>
+<!-- HEADER -->
+<header>
+    <div class="header-inner">
+        <h1>University Blog</h1>
 
-            <!-- Navigation menu -->
-            <div class="nav-links">
-                <a href="index.html" aria-current="page">Home</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-            </div>
-
-            <!-- Logo -->
-            <img src="img/university.jpg" alt="University Logo">
+        <!-- Navigation menu -->
+        <div class="nav-links">
+            <a href="index.html" aria-current="page">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
         </div>
-    </header>
 
-    <!-- MAIN CONTENT -->
-    <main>
+        <!-- Logo -->
+        <img src="img/university.jpg" alt="University Logo">
+    </div>
+</header>
 
-        <!-- Intro Section -->
-        <section aria-labelledby="intro-heading">
-            <h2 id="intro-heading">Welcome to my university blog</h2>
-            <p>
-                This blog presents student life, academic projects, and useful resources from Warsaw Management University.
-                It was created as part of a Web Systems course to demonstrate basic web development skills.
-            </p>
-            <img src="img/students.jpg" alt="Students at university" class="main-image">
-            <p>Use the navigation at the top to explore the project.</p>
-        </section>
+<!-- MAIN CONTENT -->
+<main>
 
-        <!-- Dynamic Posts Section -->
-        <section aria-labelledby="posts-heading">
-            <h2 id="posts-heading">Latest Posts</h2>
+    <!-- Intro Section -->
+    <section aria-labelledby="intro-heading">
+        <h2 id="intro-heading">Welcome to my university blog</h2>
+        <p>
+            This blog presents student life, academic projects, and useful resources from Warsaw Management University.
+            It was created as part of a Web Systems course to demonstrate basic web development skills.
+        </p>
 
-            <!-- STATIC FALLBACK POSTS -->
-            <article>
-                <h3>Welcome to my university blog</h3>
-                <p>This blog shares student life, projects, and resources from Warsaw Management University.</p>
-                <a href="#">Read more</a>
-            </article>
+        <!-- Homepage image -->
+        <img src="img/students.jpg" alt="Students at university" class="main-image">
 
-            <article>
-                <h3>First web systems project</h3>
-                <p>A summary of the Exercise 1 assignment and what was implemented.</p>
-                <a href="#">Read more</a>
-            </article>
+        <p>Use the navigation at the top to explore the project.</p>
+    </section>
 
-            <!-- DYNAMIC POSTS CONTAINER -->
-            <div id="posts-container" aria-live="polite" aria-busy="false"></div>
+    <!-- Latest Posts Section -->
+    <section aria-labelledby="posts-heading">
+        <h2 id="posts-heading">Latest Posts</h2>
 
-            <!-- LOADING INDICATOR -->
-            <p id="loading-indicator" hidden>Loading posts...</p>
+        <!-- STATIC FALLBACK POSTS -->
+        <article>
+            <h3>Welcome to my university blog</h3>
+            <p>This blog shares student life, projects, and resources from Warsaw Management University.</p>
+            <a href="#">Read more</a>
+        </article>
 
-            <!-- ERROR MESSAGE -->
-            <p id="error-message" role="alert" hidden></p>
-        </section>
+        <article>
+            <h3>First web systems project</h3>
+            <p>A summary of the Exercise 1 assignment and what was implemented.</p>
+            <a href="#">Read more</a>
+        </article>
 
-    </main>
+        <!-- DYNAMIC POSTS CONTAINER -->
+        <div id="posts-container" aria-live="polite" aria-busy="false"></div>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>&copy; 2025 Warsaw Management University - Student Blog Project</p>
-    </footer>
+        <!-- LOADING INDICATOR -->
+        <p id="loading-indicator" hidden>Loading posts...</p>
 
-    <!-- ES6 MODULE SCRIPT -->
-    <script type="module" src="js/main.js"></script>
+        <!-- ERROR MESSAGE -->
+        <p id="error-message" role="alert" hidden></p>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <p>&copy; 2025 Warsaw Management University - Student Blog Project</p>
+</footer>
+
+<!-- ES6 MODULE SCRIPT -->
+<script type="module" src="js/main.js"></script>
 
 </body>
 </html>
