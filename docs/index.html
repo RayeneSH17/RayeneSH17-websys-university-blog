@@ -1,80 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>University Blog - Home</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>University Blog - Home</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
 <!-- HEADER -->
 <header>
-    <div class="header-inner">
-        <h1>University Blog</h1>
+  <div class="header-inner">
+    <h1>University Blog</h1>
 
-        <!-- Navigation menu -->
-        <div class="nav-links">
-            <a href="index.html" aria-current="page">Home</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-        </div>
+    <!-- Navigation menu -->
+    <nav>
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
 
-        <!-- Logo -->
-        <img src="img/university.jpg" alt="University Logo">
-    </div>
+    <!-- Logo -->
+    <img src="img/university.jpg" alt="University Logo">
+  </div>
 </header>
 
 <!-- MAIN CONTENT -->
 <main>
 
-    <!-- Intro Section -->
-    <section aria-labelledby="intro-heading">
-        <h2 id="intro-heading">Welcome to my university blog</h2>
-        <p>
-            This blog presents student life, academic projects, and useful resources from Warsaw Management University.
-            It was created as part of a Web Systems course to demonstrate basic web development skills.
-        </p>
+  <!-- Intro Section -->
+  <section aria-labelledby="intro-heading">
+    <h2 id="intro-heading">Welcome to my university blog</h2>
+    <p>
+      This blog presents student life, academic projects, and useful resources from Warsaw Management University.
+      It was created as part of a Web Systems course to demonstrate basic web development skills.
+    </p>
 
-        <!-- Homepage image -->
-        <img src="img/students.jpg" alt="Students at university" class="main-image">
+    <!-- Homepage image -->
+    <img src="img/students.jpg" alt="Students at university" class="main-image">
 
-        <p>Use the navigation at the top to explore the project.</p>
-    </section>
+    <p>Use the navigation at the top to explore the project.</p>
+  </section>
 
-    <!-- Latest Posts Section -->
-    <section aria-labelledby="posts-heading">
-        <h2 id="posts-heading">Latest Posts</h2>
+  <!-- Latest Posts Section -->
+  <section aria-labelledby="posts-heading">
+    <h2 id="posts-heading">Latest Posts</h2>
 
-        <!-- STATIC FALLBACK POSTS -->
-        <article>
-            <h3>Welcome to my university blog</h3>
-            <p>This blog shares student life, projects, and resources from Warsaw Management University.</p>
-            <a href="#">Read more</a>
-        </article>
+    <!-- STATIC FALLBACK POSTS -->
+    <article>
+      <h3>Welcome to my university blog</h3>
+      <p>This blog shares student life, projects, and resources from Warsaw Management University.</p>
+      <a href="#">Read more</a>
+    </article>
 
-        <article>
-            <h3>First web systems project</h3>
-            <p>A summary of the Exercise 1 assignment and what was implemented.</p>
-            <a href="#">Read more</a>
-        </article>
+    <article>
+      <h3>First web systems project</h3>
+      <p>A summary of the Exercise 1 assignment and what was implemented.</p>
+      <a href="#">Read more</a>
+    </article>
 
-        <!-- DYNAMIC POSTS CONTAINER -->
-        <div id="posts-container" aria-live="polite" aria-busy="false"></div>
+    <!-- DYNAMIC POSTS CONTAINER -->
+    <div id="posts-container" aria-live="polite" aria-busy="false"></div>
 
-        <!-- LOADING INDICATOR -->
-        <p id="loading-indicator" hidden>Loading posts...</p>
+    <!-- LOADING INDICATOR -->
+    <p id="loading-indicator" hidden>Loading posts...</p>
 
-        <!-- ERROR MESSAGE -->
-        <p id="error-message" role="alert" hidden></p>
-    </section>
+    <!-- ERROR MESSAGE -->
+    <p id="error-message" role="alert" hidden></p>
+  </section>
 
 </main>
 
 <!-- FOOTER -->
 <footer>
-    <p>&copy; 2025 Warsaw Management University - Student Blog Project</p>
+  <p>&copy; 2025 Warsaw Management University - Student Blog Project</p>
 </footer>
 
 <!-- ES6 MODULE SCRIPT -->
