@@ -1,3 +1,5 @@
+// js/main.js
+
 import { fetchPosts } from './api.js';
 import { showLoading, hideLoading, showError, clearError, renderPosts } from './ui.js';
 import { validateContactForm } from './validation.js';
