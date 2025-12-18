@@ -1,3 +1,5 @@
+// js/api.js
+
 const POSTS_URL = 'data/posts.json';
 
 export async function fetchPosts() {
