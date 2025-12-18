@@ -15,7 +15,7 @@
     <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
+      <a href="contact.html" aria-current="page">Contact</a>
     </div>
 
     <!-- Logo -->
@@ -26,9 +26,32 @@
 <main>
   <h2>Get in Touch</h2>
   <p>
-    If you would like more information about this project or the university, you can use the
-    contact details below.
+    If you would like more information about this project or the university, feel free to use the contact form below.
   </p>
+
+  <!-- ⭐ CONTACT FORM (Required for Exercise 2) ⭐ -->
+  <section aria-labelledby="contact-form-heading">
+    <h3 id="contact-form-heading">Send a Message</h3>
+
+    <form id="contactForm" novalidate>
+      <div class="form-group">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Your Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+  </section>
 
   <h3>Contact Information</h3>
   <p><strong>Email:</strong> student.support@wm-university.edu</p>
@@ -46,6 +69,9 @@
 <footer>
   © 2025 Warsaw Management University — Student Blog Project
 </footer>
+
+<!-- ⭐ REQUIRED FOR VALIDATION ⭐ -->
+<script type="module" src="js/main.js"></script>
 
 </body>
 </html>
