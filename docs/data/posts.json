@@ -1,1 +1,37 @@
-
+[
+  {
+    "id": 1,
+    "title": "First Lab Recap",
+    "body": "This post summarizes what we did in Exercise 1: creating a static university blog with HTML and CSS.",
+    "author": "Souahi Rayene",
+    "created_at": "2025-12-04T18:00:00Z"
+  },
+  {
+    "id": 2,
+    "title": "Web Systems Design – Exercise 2",
+    "body": "In this exercise we add dynamic posts loaded from JSON, JavaScript modules, and better validation.",
+    "author": "Web Systems Instructor",
+    "created_at": "2025-12-18T18:00:00Z"
+  },
+  {
+    "id": 3,
+    "title": "Student Life and Projects",
+    "body": "Short overview of student activities, group projects, and events at Warsaw Management University.",
+    "author": "Student Editorial Team",
+    "created_at": "2025-12-10T10:30:00Z"
+  },
+  {
+    "id": 4,
+    "title": "Accessibility and Responsive Design",
+    "body": "Why accessibility, semantic HTML, and responsive layouts are important for modern university websites.",
+    "author": "Accessibility Team",
+    "created_at": "2025-12-15T09:15:00Z"
+  },
+  {
+    "id": 5,
+    "title": "Upcoming Exams and Deadlines",
+    "body": "Reminder of important academic dates and deadlines for the current semester.",
+    "author": "Dean’s Office",
+    "created_at": "2025-12-20T11:45:00Z"
+  }
+]
