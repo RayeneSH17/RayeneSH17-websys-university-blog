@@ -14,8 +14,8 @@
   <div class="header-inner">
     <h1>University Blog</h1>
 
-    <!-- Navigation menu -->
-    <nav>
+    <!-- Navigation menu with ARIA label -->
+    <nav aria-label="Main navigation">
       <ul>
         <li><a href="index.html" aria-current="page">Home</a></li>
         <li><a href="about.html">About</a></li>
@@ -40,7 +40,7 @@
     </p>
 
     <!-- Homepage image -->
-    <img src="img/students.jpg" alt="Students at university" class="main-image">
+    <img src="img/students.jpg" alt="Students at university" class="main-image" loading="lazy">
 
     <p>Use the navigation at the top to explore the project.</p>
   </section>
@@ -63,7 +63,7 @@
     </article>
 
     <!-- DYNAMIC POSTS CONTAINER -->
-    <div id="posts-container" aria-live="polite" aria-busy="false"></div>
+    <div id="posts-container" aria-live="polite" aria-busy="false" role="list"></div>
 
     <!-- LOADING INDICATOR -->
     <p id="loading-indicator" hidden>Loading posts...</p>
