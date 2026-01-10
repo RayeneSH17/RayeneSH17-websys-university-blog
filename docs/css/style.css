@@ -157,3 +157,28 @@ footer {
     width: 100%;
   }
 }
+/* Large screens (>1200px) */
+@media (min-width: 1200px) {
+  #post-list {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+/* Medium screens (768px–1199px) */
+@media (max-width: 1199px) and (min-width: 768px) {
+  #post-list {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+/* Small screens (<768px) */
+@media (max-width: 767px) {
+  #post-list {
+    grid-template-columns: 1fr;
+  }
+
+  nav a {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+}
