@@ -182,3 +182,7 @@ footer {
     margin-bottom: 0.5rem;
   }
 }
+a:focus,
+button:focus {
+  outline: 3px solid #0055ff;
+}
