@@ -1,11 +1,90 @@
-<form id="createPostForm">
-  <label for="title">Title:</label>
-  <input type="text" id="title" required minlength="5">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>University Blog – Create Post</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
 
-  <label for="body">Body:</label>
-  <textarea id="body" rows="6" required minlength="20"></textarea>
+<body>
 
-  <button type="submit">Add Post</button>
-</form>
+<!-- SKIP LINK -->
+<a href="#main" class="skip-link">Skip to main content</a>
 
+<!-- HEADER -->
+<header role="banner">
+  <div class="header-inner">
+    <h1>Create a New Post</h1>
+
+    <!-- Navigation -->
+    <nav role="navigation" aria-label="Main menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="create-post.html" aria-current="page">Create Post</a></li>
+      </ul>
+    </nav>
+
+    <!-- Logo -->
+    <img src="img/university.jpg" alt="Warsaw Management University logo">
+  </div>
+</header>
+
+<!-- MAIN CONTENT -->
+<main role="main" id="main">
+
+  <h2>Create a New Blog Post</h2>
+  <p>Fill out the form below to add a new post to the blog.</p>
+
+  <section aria-labelledby="create-post-heading">
+    <h3 id="create-post-heading">Post Details</h3>
+
+    <form id="createPostForm" novalidate>
+
+      <!-- Title -->
+      <div class="form-group">
+        <label for="title">Title:</label>
+        <input 
+          type="text" 
+          id="title" 
+          name="title" 
+          required 
+          minlength="5"
+          aria-describedby="titleHelp">
+        <span id="titleHelp" class="visually-hidden">Title must be at least 5 characters</span>
+      </div>
+
+      <!-- Body -->
+      <div class="form-group">
+        <label for="body">Body:</label>
+        <textarea 
+          id="body" 
+          name="body" 
+          rows="6" 
+          required 
+          minlength="20"
+          aria-describedby="bodyHelp"></textarea>
+        <span id="bodyHelp" class="visually-hidden">Body must be at least 20 characters</span>
+      </div>
+
+      <button type="submit" class="submit-btn">Add Post</button>
+    </form>
+
+    <!-- JS error messages will appear here -->
+    <p id="error-message" role="alert" hidden></p>
+
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer role="contentinfo">
+  © 2025 Warsaw Management University — Student Blog Project
+</footer>
+
+<!-- JS MODULE -->
 <script type="module" src="js/create-post.js"></script>
+
+</body>
+</html>
