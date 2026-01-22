@@ -5,21 +5,34 @@
   <title>University Blog - About</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-<header>
+<!-- SKIP LINK -->
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<!-- HEADER -->
+<header role="banner">
   <div class="header-inner">
     <h1>About This Blog</h1>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </div>
-    <img src="img/university.jpg" alt="University Logo">
+
+    <!-- Navigation menu -->
+    <nav role="navigation" aria-label="Main menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" aria-current="page">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Logo -->
+    <img src="img/university.jpg" alt="Warsaw Management University logo">
   </div>
 </header>
 
-<main>
+<!-- MAIN CONTENT -->
+<main role="main" id="main">
+
   <h2>Project Background</h2>
   <p>
     This website was developed as part of the Web Systems course at Warsaw Management University.
@@ -32,15 +45,17 @@
     The blog includes: page structure, navigation, images, external CSS, and a clean academic layout.
   </p>
 
-  <img src="img/campus.jpg" alt="University campus" class="main-image">
+  <img src="img/campus.jpg" alt="Warsaw Management University campus" class="main-image">
 
   <p>
     In a real scenario, this blog could be used to share updates about student projects, events,
     and academic news.
   </p>
+
 </main>
 
-<footer>
+<!-- FOOTER -->
+<footer role="contentinfo">
   © 2025 Warsaw Management University — Student Blog Project — 56DPH
 </footer>
 
