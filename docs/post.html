@@ -2,29 +2,58 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Post Details</title>
+  <title>University Blog – Post Details</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-  <header>
+<!-- SKIP LINK -->
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<!-- HEADER -->
+<header role="banner">
+  <div class="header-inner">
     <h1>Post Details</h1>
-    <nav aria-label="Main navigation">
-      <a href="index.html">Home</a>
+
+    <!-- Navigation -->
+    <nav role="navigation" aria-label="Main menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      </ul>
     </nav>
-  </header>
 
-  <main>
-    <p>This is a placeholder for post details. You can load content dynamically using JavaScript later.</p>
-  </main>
+    <!-- Logo -->
+    <img src="img/university.jpg" alt="Warsaw Management University logo">
+  </div>
+</header>
 
-  <footer>
-    <p>&copy; 2025 Warsaw Management University</p>
-  </footer>
+<!-- MAIN CONTENT -->
+<main role="main" id="main">
 
-  <!-- Optional: dynamic post loading -->
-  <script type="module" src="js/post.js"></script>
+  <section aria-labelledby="post-heading">
+    <h2 id="post-heading">Blog Post</h2>
+
+    <p id="post-content">
+      This is a placeholder for post details. Content will be loaded dynamically using JavaScript.
+    </p>
+
+    <!-- Dynamic post container -->
+    <article id="post-container" aria-live="polite"></article>
+
+    <!-- Error message for dynamic loading -->
+    <p id="error-message" role="alert" hidden></p>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer role="contentinfo">
+  <p>&copy; 2025 Warsaw Management University — Student Blog Project</p>
+</footer>
+
+<!-- JS MODULE -->
+<script type="module" src="js/post.js"></script>
 
 </body>
 </html>
