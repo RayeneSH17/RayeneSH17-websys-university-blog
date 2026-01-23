@@ -15,6 +15,10 @@ export function validateContactForm(form) {
     p.classList.add('error');
     p.style.color = 'red';
     p.textContent = text;
+
+    // ADDED: make error accessible to screen readers
+    p.setAttribute('role', 'alert');
+
     input.insertAdjacentElement('afterend', p);
     valid = false;
   }
@@ -33,6 +37,7 @@ export function validateContactForm(form) {
 
   return valid;
 }
+
 export function attachFormValidation() {
   const form = document.getElementById('createPostForm');
   if (!form) return;
@@ -71,6 +76,10 @@ function showError(input, message) {
   span.className = 'error';
   span.style.color = 'red';
   span.textContent = message;
+
+  // ADDED: make error accessible to screen readers
+  span.setAttribute('role', 'alert');
+
   input.insertAdjacentElement('afterend', span);
 }
 
