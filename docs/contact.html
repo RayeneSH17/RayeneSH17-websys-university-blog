@@ -53,16 +53,21 @@
       <button type="submit" class="submit-btn">Send Message</button>
     </form>
 
-    <p id="error-message" role="alert" hidden></p>
+    <!-- ADDED aria-live for screen reader announcements -->
+    <p id="error-message" role="alert" aria-live="polite" hidden></p>
   </section>
 
-  <h3>Contact Information</h3>
-  <p><strong>Email:</strong> student.support@wm-university.edu</p>
-  <p><strong>Phone:</strong> +48 22 123 45 67</p>
-  <p><strong>Office hours:</strong> Monday–Friday, 9:00–15:00 (CET)</p>
+  <!-- ADDED region landmark for better navigation -->
+  <section role="region" aria-labelledby="contact-info-heading">
+    <h3 id="contact-info-heading">Contact Information</h3>
+    <p><strong>Email:</strong> student.support@wm-university.edu</p>
+    <p><strong>Phone:</strong> +48 22 123 45 67</p>
+    <p><strong>Office hours:</strong> Monday–Friday, 9:00–15:00 (CET)</p>
 
-  <img src="img/office.jpg" alt="University office workspace" class="main-image">
-  <p>These are example contact details created for the purposes of this assignment.</p>
+    <img src="img/office.jpg" alt="University office workspace" class="main-image">
+    <p>These are example contact details created for the purposes of this assignment.</p>
+  </section>
+
 </main>
 
 <footer role="contentinfo">
