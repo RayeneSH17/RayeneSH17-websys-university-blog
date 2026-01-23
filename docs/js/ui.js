@@ -37,6 +37,9 @@ export function renderPosts(posts) {
     const article = document.createElement('article');
     article.classList.add('post');
 
+    // ADDED: Accessibility role for dynamic posts
+    article.setAttribute('role', 'listitem');
+
     const title = document.createElement('h3');
     title.textContent = post.title;
 
@@ -51,6 +54,9 @@ export function renderPosts(posts) {
     link.href = '#';
     link.textContent = 'Read more';
     link.classList.add('read-more');
+
+    // OPTIONAL but recommended: improves screen reader clarity
+    link.setAttribute('aria-label', `Read more about ${post.title}`);
 
     article.appendChild(title);
     article.appendChild(meta);
