@@ -1,42 +1,5 @@
 // js/validation.js
-
-export function validateContactForm(form) {
-  let valid = true;
-
-  const name = form.querySelector('#name');
-  const email = form.querySelector('#email');
-  const message = form.querySelector('#message');
-
-  // Clear previous errors
-  form.querySelectorAll('.error').forEach(e => e.remove());
-
-  function showError(input, text) {
-    const p = document.createElement('p');
-    p.classList.add('error');
-    p.style.color = 'red';
-    p.textContent = text;
-
-    // ADDED: make error accessible to screen readers
-    p.setAttribute('role', 'alert');
-
-    input.insertAdjacentElement('afterend', p);
-    valid = false;
-  }
-
-  if (name && name.value.trim().length < 3) {
-    showError(name, 'Name must be at least 3 characters.');
-  }
-
-  if (email && !email.value.includes('@')) {
-    showError(email, 'Please enter a valid email address.');
-  }
-
-  if (message && message.value.trim().length < 10) {
-    showError(message, 'Message must be at least 10 characters.');
-  }
-
-  return valid;
-}
+// CONTACT FORM VALIDATION REMOVED — Bootstrap handles it now
 
 export function attachFormValidation() {
   const form = document.getElementById('createPostForm');
@@ -76,10 +39,7 @@ function showError(input, message) {
   span.className = 'error';
   span.style.color = 'red';
   span.textContent = message;
-
-  // ADDED: make error accessible to screen readers
   span.setAttribute('role', 'alert');
-
   input.insertAdjacentElement('afterend', span);
 }
 
