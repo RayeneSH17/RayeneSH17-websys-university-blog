@@ -2,7 +2,6 @@
 
 import { fetchPosts } from './api.js';
 import { showLoading, hideLoading, showError, clearError, renderPosts } from './ui.js';
-import { validateContactForm } from './validation.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
   clearError();
@@ -18,14 +17,28 @@ document.addEventListener('DOMContentLoaded', async () => {
     hideLoading();
   }
 
+  // Bootstrap form validation
   const form = document.querySelector('#contactForm');
+
   if (form) {
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      if (validateContactForm(form)) {
-        alert('Form submitted!');
-        form.reset();
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      // If form is invalid → show Bootstrap validation
+      if (!form.checkValidity()) {
+        form.classList.add('was-validated');
+        return;
       }
+
+      // If form is valid → show success message
+      form.classList.add('was-validated');
+
+      const successMessage = document.createElement('p');
+      successMessage.textContent = 'Message sent successfully!';
+      successMessage.classList.add('alert', 'alert-success', 'mt-3');
+
+      form.after(successMessage);
+      form.reset();
     });
   }
 });
