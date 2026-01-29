@@ -3,36 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <title>University Blog – Create Post</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+        crossorigin="anonymous">
+
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<!-- SKIP LINK -->
 <a href="#main" class="skip-link">Skip to main content</a>
 
-<!-- HEADER -->
-<header role="banner">
-  <div class="header-inner">
-    <h1>Create a New Post</h1>
+<header role="banner" class="mb-3">
 
-    <!-- Navigation -->
-    <nav role="navigation" aria-label="Main menu">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="create-post.html" aria-current="page">Create Post</a></li>
-      </ul>
-    </nav>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary" aria-label="Main menu">
+    <div class="container-fluid">
 
-    <!-- Logo -->
-    <img src="img/university.jpg" alt="Warsaw Management University logo">
+      <a class="navbar-brand" href="index.html">University Blog</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#mainNav" aria-controls="mainNav"
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="create-post.html">Create Post</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+  <div class="text-center mt-3">
+    <img src="img/university.jpg" alt="Warsaw Management University logo" class="img-fluid" style="max-height: 120px;">
   </div>
+
 </header>
 
-<!-- MAIN CONTENT -->
-<main role="main" id="main">
+<main role="main" id="main" class="container my-4">
 
   <h2>Create a New Blog Post</h2>
   <p>Fill out the form below to add a new post to the blog.</p>
@@ -40,50 +56,54 @@
   <section aria-labelledby="create-post-heading">
     <h3 id="create-post-heading">Post Details</h3>
 
-    <form id="createPostForm" novalidate>
+    <form id="createPostForm" class="needs-validation" novalidate>
 
-      <!-- Title -->
-      <div class="form-group">
-        <label for="title">Title:</label>
+      <div class="mb-3">
+        <label for="title" class="form-label">Title:</label>
         <input 
           type="text" 
           id="title" 
           name="title" 
+          class="form-control"
           required 
           minlength="5"
           aria-describedby="titleHelp">
         <span id="titleHelp" class="visually-hidden">Title must be at least 5 characters</span>
+        <div class="invalid-feedback">Title must be at least 5 characters.</div>
       </div>
 
-      <!-- Body -->
-      <div class="form-group">
-        <label for="body">Body:</label>
+      <div class="mb-3">
+        <label for="body" class="form-label">Body:</label>
         <textarea 
           id="body" 
           name="body" 
           rows="6" 
+          class="form-control"
           required 
           minlength="20"
           aria-describedby="bodyHelp"></textarea>
         <span id="bodyHelp" class="visually-hidden">Body must be at least 20 characters</span>
+        <div class="invalid-feedback">Body must be at least 20 characters.</div>
       </div>
 
-      <button type="submit" class="submit-btn">Add Post</button>
+      <button type="submit" class="btn btn-primary">Add Post</button>
     </form>
 
-    <!-- JS error messages will appear here -->
     <p id="error-message" role="alert" hidden></p>
 
   </section>
 
 </main>
 
-<!-- FOOTER -->
-<footer role="contentinfo">
+<footer role="contentinfo" class="text-center py-3 bg-light mt-4">
   © 2025 Warsaw Management University — Student Blog Project
 </footer>
 
-<!-- JS MODULE -->
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
+        crossorigin="anonymous"></script>
+
 <script type="module" src="js/create-post.js"></script>
 
 </body>
