@@ -34,35 +34,45 @@ export function renderPosts(posts) {
   postsContainer.innerHTML = '';
 
   posts.forEach((post) => {
-    const article = document.createElement('article');
-    article.classList.add('post');
 
-    // ADDED: Accessibility role for dynamic posts
+    // Bootstrap grid column
+    const col = document.createElement('div');
+    col.classList.add('col-12', 'col-md-6', 'col-lg-4');
+
+    // Article wrapper with Bootstrap card
+    const article = document.createElement('article');
     article.setAttribute('role', 'listitem');
+    article.classList.add('card', 'h-100', 'shadow-sm');
+
+    const cardBody = document.createElement('div');
+    cardBody.classList.add('card-body');
 
     const title = document.createElement('h3');
+    title.classList.add('card-title');
     title.textContent = post.title;
 
     const meta = document.createElement('p');
-    meta.classList.add('post-meta');
+    meta.classList.add('post-meta', 'text-muted', 'mb-2');
     meta.textContent = `${post.author} – ${new Date(post.created_at).toLocaleDateString()}`;
 
     const body = document.createElement('p');
+    body.classList.add('card-text');
     body.textContent = post.body;
 
     const link = document.createElement('a');
     link.href = '#';
     link.textContent = 'Read more';
-    link.classList.add('read-more');
-
-    // OPTIONAL but recommended: improves screen reader clarity
+    link.classList.add('btn', 'btn-primary', 'btn-sm');
     link.setAttribute('aria-label', `Read more about ${post.title}`);
 
-    article.appendChild(title);
-    article.appendChild(meta);
-    article.appendChild(body);
-    article.appendChild(link);
+    cardBody.appendChild(title);
+    cardBody.appendChild(meta);
+    cardBody.appendChild(body);
+    cardBody.appendChild(link);
 
-    postsContainer.appendChild(article);
+    article.appendChild(cardBody);
+    col.appendChild(article);
+
+    postsContainer.appendChild(col);
   });
 }
